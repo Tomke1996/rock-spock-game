@@ -20,6 +20,15 @@ const hands = document.querySelectorAll('.central-container img');
 
 const resultText = document.getElementById('result-text');
 
+const rulesBtn = document.getElementById('rulesBtn');
+const closeBtn = document.querySelector('.closeBtn');
+const rulesContainer = document.querySelector('.rules-container');
+
+// Open Rules Container
+rulesBtn.addEventListener('click', () => {rulesContainer.classList.add('active')});
+// Close Rules Container
+closeBtn.addEventListener('click', () => {rulesContainer.classList.remove('active')});
+
 const choices = {
     rock: { name: 'rock', defeats: ['scissors', 'lizard']},
     paper: { name: 'paper', defeats: ['rock', 'spock']},
