@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Spock-Game</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Rock Paper Scissors Lizard Spock</h1>
+        </div>
+        <!-- Game Container -->
+        <div class="game-container">
+            <!-- Player Wrapper -->
+            <div class="player-wrapper">
+                <!-- Player Container -->
+                <div class="player-container" id="player">
+                    <h3>You <span class="playerScore" id="playerScore">0</span></h3>
+                    <i class="far fa-hand-rock" id="playerRock" title="Rock" onclick="select('rock')"></i>
+                    <i class="far fa-hand-paper" id="playerPaper" title="Paper" onclick="select('paper')"></i>
+                    <i class="far fa-hand-scissors" id="playerScissors" title="Scissors" onclick="select('scissors')"></i>
+                    <i class="far fa-hand-lizard" id="playerLizard" title="Lizard" onclick="select('lizard')"></i>
+                    <i class="far fa-hand-spock" id="playerSpock" title="Spock" onclick="select('spock')"></i>
+                </div>
+                <!-- Player Container -->
+                <div class="player-container" id="computer">
+                    <h3>Computer <span class="playerScore" id="computerScore">0</span></h3>
+                    <i class="far fa-hand-rock" id="computerRock"></i>
+                    <i class="far fa-hand-paper" id="computerPaper"></i>
+                    <i class="far fa-hand-scissors" id="computerScissors"></i>
+                    <i class="far fa-hand-lizard" id="computerLizard"></i>
+                    <i class="far fa-hand-spock" id="computerSpock"></i>
+                </div>
+            </div>
+            <!-- Central Container -->
+            <div class="central-container">
+                <img src="images/rock.png" id="playerHand" alt="your choice">
+                <h1>VS</h1>
+                <img class="rotate" src="images/rock.png" id="computerHand" alt="computer choice">
+            </div>
+            <!-- Result Container -->
+            <div class="result-container">
+                <h3 id="result-text" class="result-text"></h3>
+            </div>
+            <!-- Footer  -->
+            <div class="footer">
+                <span>rules</span>
+                <i class="fas fa-rotate-right restart" onclick="resetAll()" title="restart"></i>
+            </div>
+        </div>
+    </div>
+    
+    <!-- script js -->
+    <script src="script.js"></script>
+</body>
+</html>
